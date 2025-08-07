@@ -1,0 +1,107 @@
+{
+  "applications": [
+    {
+      "name": "DeployAutomation",
+      "applicationPoolName": "DeployAutomation",
+      "siteName": "SFPXBRLAPI API",
+      "sourcePath": "D:\\DeployAutoMation\\DEV",
+      "destinationPath": "D:\\DeployAutoMation\\PROD",
+      "watchFolders": [
+        "D:\\DeployAutoMation\\DEV"
+      ],
+      "excludePatterns": [
+        //"*.log",
+        //"*.tmp",
+        //"bin/Debug/*",
+        //"obj/*",
+        //".git/*",
+        //"*.pdb",
+        //"*.vshost.*",
+        //"packages/*",
+        //"node_modules/*"
+      ],
+      "preDeploymentSteps": [],
+      "postDeploymentSteps": [],
+      "isEnabled": true,
+      "enableFileCopy": false,
+      "priority": 1,
+      "maxRetries": 3,
+      "timeoutSeconds": 300
+    }
+    //{
+    //  "name": "ApiApplication",
+    //  "applicationPoolName": "ApiAppPool",
+    //  "siteName": "Default Web Site",
+    //  "sourcePath": "C:\\Source\\ApiApp",
+    //  "destinationPath": "C:\\inetpub\\wwwroot\\ApiApp",
+    //  "watchFolders": [
+    //    "C:\\Source\\ApiApp"
+    //  ],
+    //  "excludePatterns": [
+    //    "*.log",
+    //    "*.tmp",
+    //    "bin/Debug/*",
+    //    "obj/*",
+    //    ".git/*",
+    //    "*.pdb",
+    //    "*.vshost.*",
+    //    "packages/*",
+    //    "node_modules/*"
+    //  ],
+    //  "preDeploymentSteps": [],
+    //  "postDeploymentSteps": [],
+    //  "isEnabled": false,
+    //  "enableFileCopy": false,
+    //  "priority": 2,
+    //  "maxRetries": 3,
+    //  "timeoutSeconds": 300
+    //}
+  ],
+  "globalSettings": {
+    "enableFileSystemWatcher": true,
+    "batchDelayMilliseconds": 5000,
+    "maxConcurrentDeployments": 3,
+    "backupEnabled": true,
+    "backupPath": "C:\\DeploymentBackups",
+    "maxBackupDays": 7,
+    "requireAdminPrivileges": true,
+    "validateIISPermissions": true,
+    "enableHealthCheck": true,
+    "healthCheckTimeoutSeconds": 60
+  },
+  "notificationSettings": {
+    "enabled": false,
+    "notifyOnSuccess": false,
+    "notifyOnFailure": true,
+    "notifyOnStart": false,
+    "emailSettings": {
+      "smtpServer": "smtp.company.com",
+      "port": 587,
+      "username": "",
+      "password": "",
+      "fromEmail": "deployment@company.com",
+      "toEmails": [
+        "admin@company.com"
+      ],
+      "enableSsl": true
+    },
+    "teamsSettings": {
+      "webhookUrl": "",
+      "channelName": "Deployments"
+    },
+    "smsSettings": {
+      "provider": "",
+      "apiKey": "",
+      "phoneNumbers": []
+    }
+  },
+  "logging": {
+    "logLevel": "Information",
+    "logToFile": true,
+    "logToConsole": true,
+    "logFilePath": ".\\Logs\\deployment-{Date}.log",
+    "retainDays": 30,
+    "maxFileSizeMB": 100,
+    "enableStructuredLogging": true
+  }
+}
