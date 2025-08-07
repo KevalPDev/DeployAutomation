@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/IISDeploymentAutomation/DEMO.md
+/IISDeploymentAutomation/FEATURE_ENABLEFILECOPY.md
+/IISDeploymentAutomation/RunAsAdmin.ps1
+/IISDeploymentAutomation/PROJECT_COMPLETE.md
